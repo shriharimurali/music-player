@@ -14,7 +14,21 @@ const PlayerControls = () => {
           <button><span className="icon-suffle-icon" /></button>
           <button><span className="icon-replay-once" /></button>
         </div>
-        <div className={classes.middleControls}></div>
+        <div className={classes.middleControls}>
+          <button className={classes.btnControlBg}>
+            <span className={classes.btnBg}>
+              <i class="fas fa-chevron-left"></i>
+            </span>
+          </button>
+          <button className={classes.btnControlBgPlay}>
+            <i class="fas fa-pause"></i>
+          </button>
+          <button className={classes.btnControlBg}>
+            <span className={classes.btnBg}>
+              <i class="fas fa-chevron-right"></i>
+            </span>
+          </button>
+        </div>
         <div className={classes.rightControls}>
           <button><span className="icon-replay-all" /></button>
           <button><span className="icon-equalizer" /></button>
