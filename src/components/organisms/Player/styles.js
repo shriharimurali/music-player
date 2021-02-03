@@ -13,7 +13,7 @@ const styles = createUseStyles({
     player: {
       width: '95%',
       margin: '0 auto',
-      height: '350px',
+      height: '370px',
     }
   },
   '@media (min-width: 481px) and (max-width: 1280px)': {

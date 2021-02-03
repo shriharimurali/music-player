@@ -120,7 +120,7 @@ const styles = createUseStyles({
   '@media (max-width: 480px)': {
     playerControls: {
       width: '100%',
-      height: '100px',
+      height: '120px',
       bottom: 0,
       backgroundColor: '#f8f8f8',
       borderRadius: 30,
@@ -134,6 +134,20 @@ const styles = createUseStyles({
     },
     leftControls: {
       marginLeft: 0,
+      '& button': {
+        margin: 0,
+        '& span': {
+          fontSize: 12,
+        },
+      },
+    },
+    rightControls: {
+      '& button': {
+        margin: 0,
+        '& span': {
+          fontSize: 12,
+        },
+      },
     },
     seeker: {
       width: '60%',
@@ -144,9 +158,28 @@ const styles = createUseStyles({
       margin: '0 auto',
     },
     timer: {
-      marginTop: 5,
+      marginTop: 10,
       fontSize: 12,
     },
+    btnControlBgPlay: {
+      width: '50px !important',
+      height: '50px !important',
+
+      '& i': {
+        width: '32px',
+        height: '32px',
+        fontSize: 10,
+      }
+    },
+    btnControlBg: {
+      width: '37px !important',
+      height: '37px !important',
+    },
+    btnBg: {
+      width: 22,
+      height: 22,
+      fontSize: '14px !important',
+    }
   },
   '@media (min-width: 481px) and (max-width: 1280px)': {
     playerControls: {
