@@ -2,7 +2,7 @@ import { createUseStyles } from 'react-jss'
 
 const styles = createUseStyles({
   playerDetails: {
-    width: '40%',
+    width: '50%',
     backgroundColor: '#f8f8f8',
     boxShadow: '40px 30px 80px rgba(54, 48, 116, 0.3)',
     borderRadius: '60px',
@@ -10,10 +10,11 @@ const styles = createUseStyles({
     position: 'absolute',
     left: 0,
     zIndex: 2,
-    display: 'flex'
+    display: 'flex',
+    flexWrap: 'wrap',
   },
   artBox: {
-    width: '50%',
+    width: '60%',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -22,6 +23,10 @@ const styles = createUseStyles({
     width: '100%',
   },
   artBg: {
+    padding: '10px',
+    borderRadius: 30,
+    background: '#fff',
+    boxShadow: '0 0 100px inset #e1e1e1',
     '& p': {
       color: "#D0D1DB",
       fontSize: 18,
@@ -29,27 +34,39 @@ const styles = createUseStyles({
     }
   },
   musicDetails: {
-    width: '50%',
+    width: '40%',
     display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+    padding: '50px 0',
     '& *': {
       margin: '5px 0px',
-    },
-    '& h6': {
-      color: '#86748D',
-      fontSize: 22,
     },
     '& p': {
       color: '#86748D',
       fontSize: 18,
     },
-    '& span': {
-      color: '#86748D',
-      fontSize: 16,
-    }
   },
-  musicDetailsControls: {
-    top: -80,
-    position: 'relative',
+  songDetails: {
+    '& *': {
+      margin: '5px 0px',
+    },
+    '& h6': {
+      color: '#86748D',
+      fontSize: 32,
+      fontFamily: "'Montserrat', sans-serif",
+      marginBottom: 10,
+    },
+    '& p': {
+      fontSize: 18,
+      fontWeight: 700,
+      color: '#86748D',
+      marginBottom: 10,
+    },
+    '& span': {
+      fontSize: 18,
+      color: '#86748D',
+    }
   },
   btn: {
     width: '35px',
@@ -59,10 +76,13 @@ const styles = createUseStyles({
     borderRadius: '100%',
     margin: '0px 8px',
   },
+  musicDetailsControls: {
+    width: '100%'
+  },
   '@media (max-width: 480px)': {
     playerDetails: {
       width: '100%',
-      height: '250px',
+      height: '260px',
       top: 0,
       boxShadow: '0px -30px 80px rgb(54 48 116 / 30%)',
       maxWidth: 300,
@@ -70,7 +90,7 @@ const styles = createUseStyles({
       left: '0',
       right: '0',
       display: 'flex',
-      flexDirection: 'column',
+      flexDirection: 'row',
     },
     artBox: {
       width: '50%',
@@ -82,12 +102,18 @@ const styles = createUseStyles({
       margin: '0 auto',
       flexDirection: 'column',
     },
+    artBg: {
+      boxShadow: 'none',
+      background: 'none',
+    },
     musicDetails: {
       width: '100%',
       display: 'flex',
       top: - 80,
       position: 'relative',
       justifyContent: 'center',
+      textAlign: 'center',
+      padding: 0,
       '& *': {
         margin: '5px 0px',
       },
@@ -108,7 +134,7 @@ const styles = createUseStyles({
   '@media (min-width: 481px) and (max-width: 1280px)': {
     playerDetails: {
       width: '100%',
-      height: '350px',
+      height: '360px',
       top: 0,
       boxShadow: '0px -30px 80px rgb(54 48 116 / 30%)',
       maxWidth: 500,
@@ -116,7 +142,7 @@ const styles = createUseStyles({
       left: '0',
       right: '0',
       display: 'flex',
-      flexDirection: 'column',
+      flexDirection: 'row',
     },
     artBox: {
       width: '50%',
@@ -131,12 +157,17 @@ const styles = createUseStyles({
         textAlign: 'center',
       }
     },
+    artBg: {
+      boxShadow: 'none',
+      background: 'none',
+    },
     musicDetails: {
       width: '100%',
       display: 'flex',
       top: - 80,
       position: 'relative',
       justifyContent: 'center',
+      padding: 0,
       '& *': {
         margin: '5px 0px',
         textAlign: 'center',
@@ -154,9 +185,30 @@ const styles = createUseStyles({
         fontSize: 16,
       }
     },
+    songDetails: {
+      '& *': {
+        margin: '5px 0px',
+        textAlign: 'center',
+      },
+      '& h6': {
+        color: '#86748D',
+        fontSize: 22,
+      },
+      '& p': {
+        color: '#86748D',
+        fontSize: 18,
+        fontFamily: "'Montserrat', sans-serif",
+      },
+      '& span': {
+        color: '#86748D',
+        fontSize: 16,
+      }
+    },
     musicDetailsControls: {
       textAlign: 'center',
-    }
+      position: 'relative',
+    },
+
   },
 });
 
