@@ -5,10 +5,10 @@ import 'rc-slider/assets/index.css';
 import './seeker.css';
 import useStyles from './styles';
 
-const PlayerControls = () => {
+const PlayerControls = ({ toggle, toggleMediaControls }) => {
   const classes = useStyles();
   return (
-    <div className={classes.playerControls}>
+    <div className={toggle ? `${classes.playerControls} ${classes.toggleControls}` : classes.playerControls}>
       <div className={classes.advancedControls}>
         <div className={classes.leftControls}>
           <button><span className="icon-suffle-icon" /></button>
@@ -17,15 +17,15 @@ const PlayerControls = () => {
         <div className={classes.middleControls}>
           <button className={classes.btnControlBg}>
             <span className={classes.btnBg}>
-              <i class="fas fa-chevron-left"></i>
+              <i className="fas fa-chevron-left"></i>
             </span>
           </button>
           <button className={classes.btnControlBgPlay}>
-            <i class="fas fa-pause"></i>
+            <i className="fas fa-pause"></i>
           </button>
           <button className={classes.btnControlBg}>
             <span className={classes.btnBg}>
-              <i class="fas fa-chevron-right"></i>
+              <i className="fas fa-chevron-right"></i>
             </span>
           </button>
         </div>
@@ -42,7 +42,8 @@ const PlayerControls = () => {
         </div>
       </div>
       <div className={classes.mediaControls}></div>
-    </div>
+      <button className={classes.toggleBtn} onClick={toggleMediaControls} />
+    </div >
   )
 };
 

@@ -3,10 +3,10 @@ import useStyles from './styles';
 import artImg from '../../../assets/images/codex-omega.png';
 import './Icon.css';
 
-const PlayerDetails = () => {
+const PlayerDetails = ({ toggle }) => {
   const classes = useStyles();
   return (
-    <div className={classes.playerDetails}>
+    <div className={toggle ? `${classes.playerDetails} ${classes.toggleDetails}` : classes.playerDetails}>
       <div className={classes.artBox}>
         <div className={classes.artBg}>
           <img src={artImg} className={classes.artImg} alt="art-img" />
@@ -24,7 +24,7 @@ const PlayerDetails = () => {
             <i className="fas fa-heart" />
           </button>
           <button className={classes.btn}>
-            <span class="icon-playlist"></span>
+            <span className="icon-playlist"></span>
           </button>
           <button className={classes.btn}>
             <i className="fas fa-share-alt" />

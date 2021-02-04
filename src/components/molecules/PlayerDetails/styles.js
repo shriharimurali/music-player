@@ -12,6 +12,7 @@ const styles = createUseStyles({
     zIndex: 2,
     display: 'flex',
     flexWrap: 'wrap',
+    transition: '.2s linear',
   },
   artBox: {
     width: '60%',
@@ -69,15 +70,39 @@ const styles = createUseStyles({
     }
   },
   btn: {
-    width: '35px',
-    height: '35px',
+    width: '57px',
+    height: '57px',
     background: '#F8F8F8',
-    boxShadow: '- 10px - 10px 15px #FFFFFF, 10px 10px 10px rgba(0, 0, 0, 0.05), inset 10px 10px 10px rgba(0, 0, 0, 0.05), inset - 10px - 10px 20px #FFFFFF',
-    borderRadius: '100%',
+    boxShadow: '-10px -10px 15px #FFFFFF, 10px 10px 10px rgba(0, 0, 0, 0.05), inset 10px 10px 10px rgba(0, 0, 0, 0.05), inset -10px -10px 20px #FFFFFF',
     margin: '0px 8px',
+    borderRadius: '100%',
+    border: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
+    display: 'flex',
+    cursor: 'pointer',
+    '& i, span': {
+      color: '#C7C5D0 !important',
+      fontSize: 22,
+    },
+    '&:hover span:before': {
+      color: '#5D24D6 !important',
+      transition: '.3s ease-in',
+    },
+    '&:hover i:before': {
+      color: '#5D24D6 !important',
+      transition: '.3s ease-in',
+    },
   },
   musicDetailsControls: {
-    width: '100%'
+    width: '100%',
+    display: 'flex',
+  },
+  toggleDetails: {
+    transform: 'translateX(50%)',
+    transition: '.2s linear',
+    left: '-160px',
+    width: '61%',
   },
   '@media (max-width: 480px)': {
     playerDetails: {
@@ -130,6 +155,21 @@ const styles = createUseStyles({
         fontSize: 16,
       }
     },
+    musicDetailsControls: {
+      textAlign: 'center',
+      position: 'relative',
+      display: 'flex',
+      justifyContent: 'center',
+    },
+    btn: {
+      marginRight: 10,
+      width: '32px',
+      height: '32px',
+      '& i, span': {
+        color: '#C7C5D0 !important',
+        fontSize: 16,
+      }
+    }
   },
   '@media (min-width: 481px) and (max-width: 1280px)': {
     playerDetails: {
@@ -204,11 +244,19 @@ const styles = createUseStyles({
         fontSize: 16,
       }
     },
+    btn: {
+      margin: '0 30px',
+      width: '32px',
+      height: '32px',
+      '& i, span': {
+        color: '#C7C5D0 !important',
+        fontSize: 16,
+      }
+    },
     musicDetailsControls: {
-      textAlign: 'center',
+      justifyContent: 'center',
       position: 'relative',
     },
-
   },
 });
 
