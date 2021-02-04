@@ -41,7 +41,7 @@ const styles = createUseStyles({
   },
   leftControls: {
     display: 'flex',
-    marginLeft: 280,
+    marginLeft: '26%',
     '& button': {
       margin: '0 22px',
     }
@@ -214,7 +214,10 @@ const styles = createUseStyles({
       height: 22,
       fontSize: '14px !important',
     },
-    toggleBtn: { display: 'none' }
+    toggleBtn: { display: 'none' },
+    toggleControls: {
+      transform: 'translateX(0%)',
+    },
   },
   '@media (min-width: 481px) and (max-width: 1280px)': {
     playerControls: {
@@ -266,7 +269,10 @@ const styles = createUseStyles({
       height: 22,
       fontSize: '14px !important',
     },
-    toggleBtn: { display: 'none' }
+    toggleBtn: { display: 'none' },
+    toggleControls: {
+      transform: 'translateX(0%)',
+    },
   }
 });
 

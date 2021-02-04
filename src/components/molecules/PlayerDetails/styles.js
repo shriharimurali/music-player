@@ -15,7 +15,7 @@ const styles = createUseStyles({
     transition: '.2s linear',
   },
   artBox: {
-    width: '60%',
+    width: '55%',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -24,6 +24,7 @@ const styles = createUseStyles({
     width: '100%',
   },
   artBg: {
+    width: '80%',
     padding: '10px',
     borderRadius: 30,
     background: '#fff',
@@ -81,6 +82,9 @@ const styles = createUseStyles({
     justifyContent: 'center',
     display: 'flex',
     cursor: 'pointer',
+
+    '&:first-child': { marginLeft: 0, },
+
     '& i, span': {
       color: '#C7C5D0 !important',
       fontSize: 22,
@@ -169,6 +173,9 @@ const styles = createUseStyles({
         color: '#C7C5D0 !important',
         fontSize: 16,
       }
+    },
+    toggleDetails: {
+      transform: 'translateX(0)',
     }
   },
   '@media (min-width: 481px) and (max-width: 1280px)': {
@@ -257,6 +264,9 @@ const styles = createUseStyles({
       justifyContent: 'center',
       position: 'relative',
     },
+    toggleDetails: {
+      transform: 'translateX(0)',
+    }
   },
 });
 
