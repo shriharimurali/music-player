@@ -39,35 +39,42 @@ const styles = createUseStyles({
     width: '40%',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-around',
     padding: '50px 0',
     '& *': {
       margin: '5px 0px',
     },
     '& p': {
-      color: '#86748D',
+      color: '#AEAEAE',
       fontSize: 18,
+      marginBottom: 82,
+      fontFamily: "'Roboto', sans-serif",
     },
   },
   songDetails: {
+    lineHeight: '37px',
+    fontStyle: 'normal',
+    marginBottom: 66,
     '& *': {
       margin: '5px 0px',
+      lineHeight: 1,
     },
-    '& h6': {
+    '& h5': {
       color: '#86748D',
       fontSize: 32,
-      fontFamily: "'Montserrat', sans-serif",
-      marginBottom: 10,
+      marginBottom: 20,
+    },
+    '& h6': {
+      fontSize: 24,
+      fontWeight: 500,
+      color: '#86748D',
+      marginBottom: 15,
+      opacity: 0.5,
     },
     '& p': {
       fontSize: 18,
-      fontWeight: 700,
       color: '#86748D',
-      marginBottom: 10,
-    },
-    '& span': {
-      fontSize: 18,
-      color: '#86748D',
+      margin: 0,
+      opacity: 0.5,
     }
   },
   btn: {
@@ -146,17 +153,19 @@ const styles = createUseStyles({
       '& *': {
         margin: '5px 0px',
       },
-      '& h6': {
+      '& h5': {
         color: '#86748D',
         fontSize: 22,
       },
-      '& p': {
+      '& h6': {
         color: '#86748D',
         fontSize: 18,
+        marginBottom: 10,
       },
-      '& span': {
+      '& p': {
         color: '#86748D',
         fontSize: 16,
+        margin: 0,
       }
     },
     musicDetailsControls: {
@@ -176,12 +185,15 @@ const styles = createUseStyles({
     },
     toggleDetails: {
       transform: 'translateX(0)',
+    },
+    songDetails: {
+      lineHeight: '1',
     }
   },
   '@media (min-width: 481px) and (max-width: 1280px)': {
     playerDetails: {
       width: '100%',
-      height: '360px',
+      height: '330px',
       top: 0,
       boxShadow: '0px -30px 80px rgb(54 48 116 / 30%)',
       maxWidth: 500,
@@ -219,17 +231,18 @@ const styles = createUseStyles({
         margin: '5px 0px',
         textAlign: 'center',
       },
-      '& h6': {
+      '& h5': {
         color: '#86748D',
         fontSize: 22,
       },
-      '& p': {
+      '& h6': {
         color: '#86748D',
         fontSize: 18,
       },
-      '& span': {
+      '& p': {
         color: '#86748D',
         fontSize: 16,
+        margin: 0,
       }
     },
     songDetails: {

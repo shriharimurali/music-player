@@ -15,9 +15,9 @@ const PlayerDetails = ({ toggle }) => {
       <div className={classes.musicDetails}>
         <p>Now Playing</p>
         <div className={classes.songDetails}>
-          <h6>Purple Haze</h6>
-          <p>Jimi Hendrix</p>
-          <span>Woodstock</span>
+          <h5>Purple Haze</h5>
+          <h6>Jimi Hendrix</h6>
+          <p>Woodstock</p>
         </div>
         <div className={classes.musicDetailsControls}>
           <button className={classes.btn}>

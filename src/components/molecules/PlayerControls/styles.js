@@ -61,8 +61,8 @@ const styles = createUseStyles({
     alignItems: 'center',
     borderRadius: '100%',
     '&:hover span': {
-      background: 'linear-gradient(159.16deg, #917CE4 26.46%, rgba(63, 45, 137, 1) 116.55%)',
-      transition: 'background .2s ease-in',
+      background: 'rgba(63, 45, 137, 1)',
+      transition: 'background .3s linear',
     }
   },
   btnControlBgPlay: {
@@ -78,7 +78,7 @@ const styles = createUseStyles({
     '& i': {
       width: '73px',
       height: '73px',
-      background: 'linear-gradient(159.16deg, #917CE4 26.46%, rgba(63, 45, 137, 0) 116.55%)',
+      background: 'linear-gradient(159.16deg, #917CE4 26.46%, rgba(63, 45, 137, 1) 116.55%)',
       boxShadow: 'inset 10px 10px 15px rgba(255, 255, 255, 0.2)',
       filter: 'drop-shadow(0px 5px 10px rgba(55, 46, 152, 0.65))',
       color: '#fff',
@@ -87,16 +87,18 @@ const styles = createUseStyles({
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
+      transition: 'all .3s ease-in',
+      '-webkit-backface-visibility': 'hidden',
     },
     '&:hover i': {
-      background: 'linear-gradient(159.16deg, #917CE4 26.46%, rgba(63, 45, 137, 1) 116.55%)',
-      transition: 'all .2s ease-in',
+      background: 'rgba(63, 45, 137, 1)',
+      transition: 'background .3s linear',
     }
   },
   btnBg: {
     width: 42,
     height: 42,
-    background: 'linear-gradient(159.16deg, #917CE4 26.46%, rgba(63, 45, 137, 0) 116.55%)',
+    background: 'linear-gradient(159.16deg, #917CE4 26.46%, rgba(63, 45, 137, 1) 116.55%)',
     boxShadow: 'inset 10px 10px 15px rgba(255, 255, 255, 0.2)',
     filter: 'drop-shadow(0px 5px 10px rgba(55, 46, 152, 0.65))',
     display: 'flex',
@@ -115,15 +117,16 @@ const styles = createUseStyles({
   seeker: {
     width: '60%',
     position: 'absolute',
-    bottom: 100,
+    bottom: 70,
     right: 70,
   },
   timer: {
     color: '#AA9BBE',
     fontSize: 18,
-    marginTop: 19,
+    marginTop: 35,
     display: 'flex',
     justifyContent: 'space-between',
+    fontFamily: "'Roboto', sans-serif",
   },
   toggleBtn: {
     position: 'absolute',
@@ -186,7 +189,7 @@ const styles = createUseStyles({
     seeker: {
       width: '60%',
       position: 'absolute',
-      bottom: 10,
+      bottom: -10,
       right: 0,
       left: 0,
       margin: '0 auto',
@@ -238,7 +241,7 @@ const styles = createUseStyles({
     seeker: {
       width: '60%',
       position: 'absolute',
-      bottom: 20,
+      bottom: -10,
       right: 0,
       left: 0,
       margin: '0 auto',

@@ -20,7 +20,7 @@ const styles = createUseStyles({
     player: {
       width: '65%',
       margin: '0 auto',
-      height: '500px',
+      height: '460px',
     }
   }
 });

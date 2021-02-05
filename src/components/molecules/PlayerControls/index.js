@@ -37,8 +37,8 @@ const PlayerControls = ({ toggle, toggleMediaControls }) => {
       <div className={classes.seeker}>
         <Slider />
         <div className={classes.timer}>
-          <span>2:01:00</span>
-          <span>4:16:00</span>
+          <p>2:01:00</p>
+          <p>4:16:00</p>
         </div>
       </div>
       <div className={classes.mediaControls}></div>
